@@ -1,6 +1,8 @@
 require 'yaml'
-require 'rvg/rvg'
-include Magick
+#require 'rvg/rvg'
+#include Magick
+require 'victor'
+include Victor
 
 STATIONS = YAML.load(File.open('stations.yaml', 'r').read)
 LINES    = YAML.load(File.open('lines.yaml', 'r').read)
@@ -27,29 +29,25 @@ SECTIONS.each do |section|
   draw_coords = []
   section['coords'].split(',').each_slice(2) do |pair|
     coords = {'lat' => pair[0].to_f, 'lon' => pair[1].to_f}
-    draw_coords << geo_to_px(coords)
+    draw_coords << geo_to_px(coords).join(',')
   end
-  section['draw_coords'] = draw_coords.flatten
+  section['draw_coords'] = draw_coords.join(' ')
 end
 
 SECTIONS.each do |section|
   puts section['draw_coords']
 end
 
-RVG::dpi = 300
-rvg = RVG.new(WIDTH.px, HEIGHT.px).viewbox(0, 0, WIDTH, HEIGHT) do |canvas|
-  canvas.background_fill = 'white'
-  canvas.g do |drw|
-    STATIONS.each do |s|
-      x, y = geo_to_px(s['coords'])
-      drw.circle(4, x, y).styles(fill: '#' + LINES[s['lines'][0]['name']]['color'])
-    end
+svg = Victor::SVG.new width: WIDTH, height: HEIGHT
+
+svg.build do
+  STATIONS.each do |s|
+    x, y = geo_to_px(s['coords'])
+    circle cx: x, cy: y, r: 4, fill: '#' + LINES[s['lines'][0]['name']]['color']
   end
-  canvas.g do |drw|
-    SECTIONS.each do |s|
-      drw.polyline(s['draw_coords']).styles(stroke: '#' + LINES[s['line']]['color'], fill: 'none')
-    end
+  SECTIONS.each do |s|
+    polyline points: s['draw_coords'], stroke: '#' + LINES[s['line']]['color'], fill: 'none'
   end
 end
 
-rvg.draw.write('metro.png')
+svg.save 'metro'

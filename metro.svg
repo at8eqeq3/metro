@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="3286" height="2649" 
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<style type="text/css">
+<![CDATA[
+
+]]>
+</style>
+
+<circle cx="3140" cy="680" r="4" fill="#ef161e"/>
+<circle cx="3246" cy="790" r="4" fill="#ef161e"/>
+<circle cx="2949" cy="865" r="4" fill="#ef161e"/>
+<circle cx="2600" cy="940" r="4" fill="#ef161e"/>
+<circle cx="2471" cy="1027" r="4" fill="#ef161e"/>
+<circle cx="2360" cy="1075" r="4" fill="#ef161e"/>
+<circle cx="2285" cy="1138" r="4" fill="#ef161e"/>
+<circle cx="2186" cy="1171" r="4" fill="#ef161e"/>
+<circle cx="2070" cy="1231" r="4" fill="#ef161e"/>
+<circle cx="1964" cy="1251" r="4" fill="#ef161e"/>
+<circle cx="1898" cy="1316" r="4" fill="#ef161e"/>
+<circle cx="1835" cy="1375" r="4" fill="#ef161e"/>
+<circle cx="1741" cy="1472" r="4" fill="#ef161e"/>
+<circle cx="1584" cy="1561" r="4" fill="#ef161e"/>
+<circle cx="1437" cy="1595" r="4" fill="#ef161e"/>
+<circle cx="1390" cy="1725" r="4" fill="#ef161e"/>
+<circle cx="1131" cy="1902" r="4" fill="#ef161e"/>
+<circle cx="858" cy="2057" r="4" fill="#ef161e"/>
+<circle cx="631" cy="2191" r="4" fill="#ef161e"/>
+<circle cx="523" cy="2369" r="4" fill="#ef161e"/>
+<circle cx="217" cy="2498" r="4" fill="#ef161e"/>
+<circle cx="40" cy="2609" r="4" fill="#ef161e"/>
+<circle cx="613" cy="40" r="4" fill="#2dbe2c"/>
+<circle cx="562" cy="170" r="4" fill="#2dbe2c"/>
+<circle cx="559" cy="279" r="4" fill="#2dbe2c"/>
+<circle cx="665" cy="430" r="4" fill="#2dbe2c"/>
+<circle cx="778" cy="638" r="4" fill="#2dbe2c"/>
+<circle cx="951" cy="777" r="4" fill="#2dbe2c"/>
+<circle cx="1127" cy="825" r="4" fill="#2dbe2c"/>
+<circle cx="1378" cy="931" r="4" fill="#2dbe2c"/>
+<circle cx="1633" cy="1061" r="4" fill="#2dbe2c"/>
+<circle cx="1756" cy="1127" r="4" fill="#2dbe2c"/>
+<circle cx="1863" cy="1181" r="4" fill="#2dbe2c"/>
+<circle cx="1988" cy="1250" r="4" fill="#2dbe2c"/>
+<circle cx="2093" cy="1413" r="4" fill="#2dbe2c"/>
+<circle cx="2175" cy="1523" r="4" fill="#2dbe2c"/>
+<circle cx="2374" cy="1754" r="4" fill="#2dbe2c"/>
+<polyline points="2949,865 3246,790 3140,680" stroke="#ef161e" fill="none"/>
+<polyline points="2600,940 2949,865" stroke="#ef161e" fill="none"/>
+<polyline points="2600,940 2471,1027 2360,1075 2285,1138 2186,1171 2070,1231 1964,1251 1898,1316 1835,1375 1741,1472" stroke="#ef161e" fill="none"/>
+<polyline points="1741,1472 1584,1561 1437,1595" stroke="#ef161e" fill="none"/>
+<polyline points="1437,1595 1390,1725 1131,1902" stroke="#ef161e" fill="none"/>
+<polyline points="1131,1902 858,2057 631,2191" stroke="#ef161e" fill="none"/>
+<polyline points="631,2191 523,2369" stroke="#ef161e" fill="none"/>
+<polyline points="523,2369 217,2498" stroke="#ef161e" fill="none"/>
+<polyline points="217,2498 40,2609" stroke="#ef161e" fill="none"/>
+<polyline points="613,40 562,170 559,279" stroke="#2dbe2c" fill="none"/>
+<polyline points="559,279 665,430 778,638 951,777" stroke="#2dbe2c" fill="none"/>
+<polyline points="951,777 1127,825 1378,931 1633,1061 1756,1127 1863,1181 1988,1250" stroke="#2dbe2c" fill="none"/>
+<polyline points="1988,1250 2093,1413 2175,1523 2374,1754" stroke="#2dbe2c" fill="none"/>
+
+</svg>
