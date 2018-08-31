@@ -1,0 +1,230 @@
+# Сокольническая
+- name: Бульвар Рокоссовского
+  dates:
+    - since: 1990-08-01
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.8148
+    lon: 37.7342
+- name: Черкизовская
+  dates:
+    - since: 1990-08-01
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.8038
+    lon: 37.7448
+- name: Преображенская площадь
+  dates:
+    - since: 1965-12-31
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7963
+    lon: 37.7151
+- name: Сокольники
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7888
+    lon: 37.6802
+- name: Красносельская
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7801
+    lon: 37.6673
+- name: Комсомольская
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7753
+    lon: 37.6562
+- name: Красные ворота
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7690
+    lon: 37.6487
+- name: Чистые пруды
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7657
+    lon: 37.6388
+- name: Лубянка
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7597
+    lon: 37.6272
+- name: Охотный ряд
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7577
+    lon: 37.6166
+- name: Библиотека имени Ленина
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7512
+    lon: 37.6100
+- name: Кропоткинская
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7453
+    lon: 37.6037
+- name: Парк культуры
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7356
+    lon: 37.5943
+- name: Фрунзенская
+  dates:
+    - since: 1957-05-01
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7267
+    lon: 37.5786
+- name: Спортивная
+  dates:
+    - since: 1957-05-01
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7233
+    lon: 37.5639
+- name: Воробьёвы горы
+  dates:
+    - since: 1959-01-12
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.7103
+    lon: 37.5592
+- name: Университет
+  dates:
+    - since: 1959-01-12
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6926
+    lon: 37.5333
+- name: Проспект Вернадского
+  dates:
+    - since: 1963-12-30
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6771
+    lon: 37.5060
+- name: Юго-Западная
+  dates:
+    - since: 1963-12-30
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6637
+    lon: 37.4833
+- name: Тропарёво
+  dates:
+    - since: 2014-12-08
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6459
+    lon: 37.4725
+- name: Румянцево
+  dates:
+    - since: 2016-01-18
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6330
+    lon: 37.4419
+- name: Саларьево
+  dates:
+    - since: 2016-02-15
+  lines:
+    - name: 1SL
+  coords:
+    lat: 55.6219
+    lon: 37.4242
+# Замоскворецкая
+- name: Ховрино
+  dates:
+    - since: 2017-12-31
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8788
+    lon: 37.4815
+- name: Беломорская
+  dates:
+    - since: 2019-01-01 # не построена
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8658
+    lon: 37.4764
+- name: Речной вокзал
+  dates:
+    - since: 1964-12-31
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8549
+    lon: 37.4761
+- name: Водный стадион
+  dates:
+    - since: 1964-12-31
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8398
+    lon: 37.4867
+- name: Войковская
+  dates:
+    - since: 1964-12-31
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8190
+    lon: 37.4980
+- name: Сокол
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8051
+    lon: 37.5153
+
+
+
+
