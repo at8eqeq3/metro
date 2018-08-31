@@ -368,6 +368,201 @@
   coords:
     lat: 55.6326
     lon: 37.7660
+# Арбатско-Покровская
+- name: Пятницкое шоссе
+  dates:
+    - since: 2012-12-28
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8563
+    lon: 37.3544
+- name: Митино
+  dates:
+    - since: 2009-12-26
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8547
+    lon: 37.3622
+- name: Волоколамская
+  dates:
+    - since: 2009-12-26
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8354
+    lon: 37.3822
+- name: Мякинино
+  dates:
+    - since: 2009-12-26
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8252
+    lon: 37.3852
+- name: Строгино
+  dates:
+    - since: 2008-01-07
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8038
+    lon: 37.4031
+- name: Троице-Лыково
+  dates:
+    - since: 2019-01-01 # не построена
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7919
+    lon: 37.4006
+- name: Крылатское
+  dates:
+    - since: 1989-12-31
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7567
+    lon: 37.4081
+- name: Молодёжная
+  dates:
+    - since: 1965-07-05
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7408
+    lon: 37.4168
+- name: Кунцевская
+  dates:
+    - since: 2008-01-07
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7307
+    lon: 37.4459
+- name: Славянский бульвар
+  dates:
+    - since: 2008-09-07
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7296
+    lon: 37.4706
+- name: Парк Победы
+  dates:
+    - since: 2003-05-06
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7362
+    lon: 37.5182
+- name: Киевская
+  dates:
+    - since: 1953-04-05
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7442
+    lon: 37.5645
+- name: Смоленская
+  dates:
+    - since: 1953-04-05
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7474
+    lon: 37.5823
+- name: Арбатская
+  dates:
+    - since: 1953-04-05
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7522
+    lon: 37.6061
+- name: Площадь Революции
+  dates:
+    - since: 1938-03-13
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7566
+    lon: 37.6216
+- name: Курская
+  dates:
+    - since: 1938-03-13
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7576
+    lon: 37.6577
+- name: Бауманская
+  dates:
+    - since: 1944-01-18
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7730
+    lon: 37.6806
+- name: Электрозаводская
+  dates:
+    - since: 1944-05-15
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7817
+    lon: 37.7037
+- name: Семёновская
+  dates:
+    - since: 1944-01-18
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7833
+    lon: 37.7208
+- name: Партизанская
+  dates:
+    - since: 1944-01-18
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7886
+    lon: 37.7506
+- name: Первомайская (х)
+  dates:
+    - since: 1954-09-24
+      to: 1961-10-21
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7894
+    lon: 37.7744
+- name: Измайловская
+  dates:
+    - since: 1961-10-21
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7878
+    lon: 37.7814
+- name: Первомайская
+  dates:
+    - since: 1961-10-21
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7948
+    lon: 37.7993
+- name: Щёлковская
+  dates:
+    - since: 1963-07-22
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.8094
+    lon: 37.7986
+# Филёвская
 
 
 
