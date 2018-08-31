@@ -224,7 +224,77 @@
   coords:
     lat: 55.8051
     lon: 37.5153
-
-
+- name: Аэропорт
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.8003
+    lon: 37.5329
+- name: Динамо
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7897
+    lon: 37.5580
+- name: Белорусская
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7767
+    lon: 37.5835
+- name: Маяковская
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7701
+    lon: 37.5958
+- name: Тверская
+  dates:
+    - since: 1979-07-20
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7647
+    lon: 37.6065
+- name: Театральная
+  dates:
+    - since: 1938-09-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7578
+    lon: 37.6190
+- name: Новокузнецкая
+  dates:
+    - since: 1943-11-20
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7415
+    lon: 37.6295
+- name: Павелецкая
+  dates:
+    - since: 1943-11-20
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7305
+    lon: 37.6377
+- name: Автозаводская
+  dates:
+    - since: 1943-01-01
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.7074
+    lon: 37.6576
 
 
