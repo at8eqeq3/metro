@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg width="3286" height="2649" 
+<svg width="3498" height="2760" 
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -48,6 +48,15 @@
 <circle cx="2093" cy="1413" r="4" fill="#2dbe2c"/>
 <circle cx="2175" cy="1523" r="4" fill="#2dbe2c"/>
 <circle cx="2374" cy="1754" r="4" fill="#2dbe2c"/>
+<circle cx="2439" cy="1878" r="4" fill="#2dbe2c"/>
+<circle cx="2436" cy="2043" r="4" fill="#2dbe2c"/>
+<circle cx="2285" cy="2277" r="4" fill="#2dbe2c"/>
+<circle cx="2362" cy="2470" r="4" fill="#2dbe2c"/>
+<circle cx="2492" cy="2614" r="4" fill="#2dbe2c"/>
+<circle cx="2747" cy="2696" r="4" fill="#2dbe2c"/>
+<circle cx="2984" cy="2720" r="4" fill="#2dbe2c"/>
+<circle cx="3242" cy="2691" r="4" fill="#2dbe2c"/>
+<circle cx="3458" cy="2502" r="4" fill="#2dbe2c"/>
 <polyline points="2949,865 3246,790 3140,680" stroke="#ef161e" fill="none"/>
 <polyline points="2600,940 2949,865" stroke="#ef161e" fill="none"/>
 <polyline points="2600,940 2471,1027 2360,1075 2285,1138 2186,1171 2070,1231 1964,1251 1898,1316 1835,1375 1741,1472" stroke="#ef161e" fill="none"/>
@@ -61,5 +70,9 @@
 <polyline points="559,279 665,430 778,638 951,777" stroke="#2dbe2c" fill="none"/>
 <polyline points="951,777 1127,825 1378,931 1633,1061 1756,1127 1863,1181 1988,1250" stroke="#2dbe2c" fill="none"/>
 <polyline points="1988,1250 2093,1413 2175,1523 2374,1754" stroke="#2dbe2c" fill="none"/>
+<polyline points="2374,1754 2439,1878 2436,2043 2285,2277" stroke="#2dbe2c" fill="none"/>
+<polyline points="2285,2277 2362,2470 2492,2614 2747,2696" stroke="#2dbe2c" fill="none"/>
+<polyline points="2747,2696 2984,2720 3242,2691" stroke="#2dbe2c" fill="none"/>
+<polyline points="3242,2691 3458,2502" stroke="#2dbe2c" fill="none"/>
 
 </svg>

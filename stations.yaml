@@ -296,5 +296,78 @@
   coords:
     lat: 55.7074
     lon: 37.6576
+- name: Технопарк
+  dates:
+    - since: 2015-12-28
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6950
+    lon: 37.6641
+- name: Коломенская
+  dates:
+    - since: 1969-08-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6785
+    lon: 37.6638
+- name: Каширская
+  dates:
+    - since: 1969-08-11
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6551
+    lon: 37.6487
+- name: Кантемировская
+  dates:
+    - since: 1984-12-30
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6358
+    lon: 37.6564
+- name: Царицыно
+  dates:
+    - since: 1984-12-30
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6214
+    lon: 37.6694
+- name: Орехово
+  dates:
+    - since: 1984-12-30
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6132
+    lon: 37.6949
+- name: Домодедовская
+  dates:
+    - since: 1985-09-07
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6108
+    lon: 37.7186
+- name: Красногвардейская
+  dates:
+    - since: 1985-09-07
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6137
+    lon: 37.7444
+- name: Алма-Атинская
+  dates:
+    - since: 2012-12-24
+  lines:
+    - name: 2ZL
+  coords:
+    lat: 55.6326
+    lon: 37.7660
+
 
 
