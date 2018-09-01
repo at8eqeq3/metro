@@ -563,6 +563,111 @@
     lat: 55.8094
     lon: 37.7986
 # Филёвская
+- name: Кунцевская
+  dates:
+    - since: 1965-08-31
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7307
+    lon: 37.4459
+- name: Пионерская
+  dates:
+    - since: 1961-10-13
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7360
+    lon: 37.4671
+- name: Филёвский парк
+  dates:
+    - since: 1961-10-13
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7396
+    lon: 37.4833
+- name: Багратионовская
+  dates:
+    - since: 1961-10-13
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7438
+    lon: 37.4977
+- name: Фили
+  dates:
+    - since: 1959-11-07
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7460
+    lon: 37.5150
+- name: Кутузовская
+  dates:
+    - since: 1958-11-07
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7399
+    lon: 37.5344
+- name: Студенческая
+  dates:
+    - since: 1958-11-07
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7388
+    lon: 37.5483
+- name: Международная
+  dates:
+    - since: 2006-08-30
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7483
+    lon: 37.5339
+- name: Выставочная
+  dates:
+    - since: 2005-09-10
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7502
+    lon: 37.5408
+- name: Киевская
+  dates:
+    - since: 1937-03-20
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7436
+    lon: 37.5655
+- name: Смоленская
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7488
+    lon: 37.5825
+- name: Арбатская
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7518
+    lon: 37.6007
+- name: Александровский сад
+  dates:
+    - since: 1935-05-15
+  lines:
+    - name: 4FL
+  coords:
+    lat: 55.7525
+    lon: 37.6085
+
 
 
 

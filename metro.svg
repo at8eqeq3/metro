@@ -81,6 +81,19 @@
 <circle cx="4310" cy="950" r="4" fill="#0078be"/>
 <circle cx="4489" cy="880" r="4" fill="#0078be"/>
 <circle cx="4482" cy="734" r="4" fill="#0078be"/>
+<circle cx="955" cy="1521" r="4" fill="#00bfff"/>
+<circle cx="1167" cy="1468" r="4" fill="#00bfff"/>
+<circle cx="1329" cy="1432" r="4" fill="#00bfff"/>
+<circle cx="1473" cy="1390" r="4" fill="#00bfff"/>
+<circle cx="1646" cy="1368" r="4" fill="#00bfff"/>
+<circle cx="1840" cy="1429" r="4" fill="#00bfff"/>
+<circle cx="1979" cy="1440" r="4" fill="#00bfff"/>
+<circle cx="1835" cy="1345" r="4" fill="#00bfff"/>
+<circle cx="1904" cy="1326" r="4" fill="#00bfff"/>
+<circle cx="2151" cy="1392" r="4" fill="#00bfff"/>
+<circle cx="2321" cy="1340" r="4" fill="#00bfff"/>
+<circle cx="2503" cy="1310" r="4" fill="#00bfff"/>
+<circle cx="2581" cy="1303" r="4" fill="#00bfff"/>
 <polyline points="3647,865 3944,790 3838,680" stroke="#ef161e" fill="none"/>
 <polyline points="3298,940 3647,865" stroke="#ef161e" fill="none"/>
 <polyline points="3298,940 3169,1027 3058,1075 2983,1138 2884,1171 2768,1231 2662,1251 2596,1316 2533,1375 2439,1472" stroke="#ef161e" fill="none"/>
