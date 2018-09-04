@@ -89,12 +89,12 @@ while current_date <= END_DATE do
       end
       if exists
         x, y = geo_to_px(s['coords'])
-        circle cx: x, cy: y, r: 4, fill: '#' + LINES[s['lines'][0]['name']]['color']
+        circle cx: x, cy: y, r: 6, fill: '#' + LINES[s['lines'][0]['name']]['color']
       end
     end
     SECTIONS.each do |s|
       if s['since'] <= current_date && s['to'] >= current_date
-        polyline points: s['draw_coords'], stroke: '#' + LINES[s['line']]['color'], fill: 'none'
+        polyline points: s['draw_coords'], stroke: '#' + LINES[s['line']]['color'], fill: 'none', stroke_width: 2
       end
     end
   end

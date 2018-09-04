@@ -637,33 +637,69 @@
     lon: 37.5408
 - name: Киевская
   dates:
-    - since: 1937-03-20
+    - since: 1935-05-15
+      to: 1953-04-05
+    - since: 1958-11-07
   lines:
+    - name: 1SL
+      since: 1935-05-15
+      to: 1938-03-13
+    - name: 3APL
+      since: 1938-03-13
+      to: 1953-04-05
     - name: 4FL
+      since: 1958-11-07
   coords:
     lat: 55.7436
     lon: 37.5655
 - name: Смоленская
   dates:
     - since: 1935-05-15
+      to: 1953-04-05
+    - since: 1958-11-07
   lines:
+    - name: 1SL
+      since: 1935-05-15
+      to: 1938-03-13
+    - name: 3APL
+      since: 1938-03-13
+      to: 1953-04-05
     - name: 4FL
+      since: 1958-11-07
   coords:
     lat: 55.7488
     lon: 37.5825
 - name: Арбатская
   dates:
     - since: 1935-05-15
+      to: 1953-04-05
+    - since: 1958-11-07
   lines:
+    - name: 1SL
+      since: 1935-05-15
+      to: 1938-03-13
+    - name: 3APL
+      since: 1938-03-13
+      to: 1953-04-05
     - name: 4FL
+      since: 1958-11-07
   coords:
     lat: 55.7518
     lon: 37.6007
 - name: Александровский сад
   dates:
     - since: 1935-05-15
+      to: 1953-04-05
+    - since: 1958-11-07
   lines:
+    - name: 1SL
+      since: 1935-05-15
+      to: 1938-03-13
+    - name: 3APL
+      since: 1938-03-13
+      to: 1953-04-05
     - name: 4FL
+      since: 1958-11-07
   coords:
     lat: 55.7525
     lon: 37.6085
