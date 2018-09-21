@@ -5,23 +5,23 @@ require 'date'
 require 'victor'
 include Victor
 
-STATIONS = YAML.load(File.open('stations.yaml', 'r').read)
+STATIONS = YAML.load(File.open('stations2.yaml', 'r').read)
 LINES    = YAML.load(File.open('lines.yaml', 'r').read)
-SECTIONS = YAML.load(File.open('sections.yaml', 'r').read)
+SECTIONS = YAML.load(File.open('sections2.yaml', 'r').read)
 MARGIN = 40 # margin from outer points to image border
 
 START_DATE = Date.new(1935, 01, 01)
 END_DATE   = Date.new(2018, 12, 31)
 
-Y_MIN = STATIONS.map{|station| station['coords']['lat']}.min.to_f.round(4) * 10000
-Y_MAX = STATIONS.map{|station| station['coords']['lat']}.max.to_f.round(4) * 10000
+Y_MIN = STATIONS.map{|station| station['coords']['lat'] * 1.76}.min.to_f.round(4) * 10000
+Y_MAX = STATIONS.map{|station| station['coords']['lat'] * 1.76}.max.to_f.round(4) * 10000
 X_MIN = STATIONS.map{|station| station['coords']['lon']}.min.to_f.round(4) * 10000
 X_MAX = STATIONS.map{|station| station['coords']['lon']}.max.to_f.round(4) * 10000
 WIDTH  = (X_MAX - X_MIN).round(0) + 2 * MARGIN
 HEIGHT = (Y_MAX - Y_MIN).round(0) + 2 * MARGIN
 
 def geo_to_px(coords)
-  y = HEIGHT - (coords['lat'] * 10000 - Y_MIN + MARGIN).round(0)
+  y = HEIGHT - (coords['lat'] * 17600 - Y_MIN + MARGIN).round(0)
   x = (coords['lon'] * 10000 - X_MIN + MARGIN).round(0)
   return [x, y]
 end
@@ -80,23 +80,60 @@ while current_date <= END_DATE do
   svg = Victor::SVG.new width: WIDTH, height: HEIGHT
 
   svg.build do
+    rect x: 0, y: 0, width: WIDTH, height: HEIGHT, fill: '#fafafa'
+    text current_date.to_s, font_size: 120, font_family: 'arial', font_weight: 'bold', x: 64, y: 200
+    
+    SECTIONS.each do |s|
+      str_width = 8
+      s_since = Date.new(s['since'].year, s['since'].month, 1)
+      s_to = Date.new(s['to'].year, s['to'].month, 1)
+      if s_since == current_date
+        str_width = 12
+      end
+      if s_since <= current_date && s_to >= current_date
+        polyline points: s['draw_coords'], stroke: '#' + LINES[s['line']]['color'], fill: 'none', stroke_width: str_width
+      end
+    end
+    
+    stations_count = 0
+    
     STATIONS.each do |s|
       exists = false
+      radius = 16
       s['dates'].each do |dt|
-        if dt['since'] <= current_date && dt['to'] >= current_date
+        #puts dt['since'].year
+        #puts current_date.year
+        dt_since = Date.new(dt['since'].year, dt['since'].month, 1)
+        dt_to = Date.new(dt['to'].year, dt['to'].month, 1)
+        if dt_since == current_date
+#          puts "hit!"
+          radius = 24
+        end
+        if dt_since <= current_date && dt_to >= current_date
           exists = true
         end
       end
+#      puts radius if radius > 16
       if exists
+        stations_count +=1
+        color = ''
+        s['lines'].each do |line|
+          line_since = Date.new(line['since'].year, line['since'].month, 1)
+          line_to = Date.new(line['to'].year, line['to'].month, 1)
+          if line_since == current_date
+            radius = 24
+          end
+          if line_since <= current_date && line_to >= current_date
+            color = LINES[line['name']]['color']
+          end
+        end
         x, y = geo_to_px(s['coords'])
-        circle cx: x, cy: y, r: 6, fill: '#' + LINES[s['lines'][0]['name']]['color']
+        circle cx: x, cy: y, r: radius, fill: '#' + color.to_s
       end
     end
-    SECTIONS.each do |s|
-      if s['since'] <= current_date && s['to'] >= current_date
-        polyline points: s['draw_coords'], stroke: '#' + LINES[s['line']]['color'], fill: 'none', stroke_width: 2
-      end
-    end
+    
+    text stations_count.to_s, font_size: 240, font_family: 'arial', font_weight: 'bold', x: 64, y: 400
+    
   end
 
   svg.save current_date.strftime 'svg/metro-%Y-%m'
