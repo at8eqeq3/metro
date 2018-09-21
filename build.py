@@ -1,10 +1,11 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 import yaml
 from datetime import date, timedelta
+from dateutil.relativedelta import *
 
-stations_str = file('stations.yaml', 'r')
+stations_str = file('stations2.yaml', 'r')
 lines_str = file('lines.yaml', 'r')
-sections_str = file('sections.yaml', 'r')
+sections_str = file('sections2.yaml', 'r')
 
 stations = yaml.load(stations_str)
 lines    = yaml.load(lines_str)
@@ -12,21 +13,39 @@ sections = yaml.load(sections_str)
 
 margin = 40
 
-start_date = date(1935, 01, 01)
+font_120 = ImageFont.truetype('FreeSans.ttf', 120)
+font_240 = ImageFont.truetype('FreeSans.ttf', 240)
+
+images = []
+
+#start_date = date(1935, 01, 01)
+start_date = date(2009, 12, 01)
 end_date = date(2019, 01, 01)
 
-y_min = round(float(min(list(map(lambda station: station['coords']['lat'], stations)))), 4) * 10000
-y_max = round(float(max(list(map(lambda station: station['coords']['lat'], stations)))), 4) * 10000
-x_min = round(float(min(list(map(lambda station: station['coords']['lon'], stations)))), 4) * 10000
-x_max = round(float(max(list(map(lambda station: station['coords']['lon'], stations)))), 4) * 10000
+y_min = int(round(float(min(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
+y_max = int(round(float(max(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
+x_min = int(round(float(min(list(map(lambda station: station['coords']['lon'], stations)))), 4) * 10000)
+x_max = int(round(float(max(list(map(lambda station: station['coords']['lon'], stations)))), 4) * 10000)
 
-width = round(x_max - x_min) + 2 * margin
-height = round(y_max - y_min) + 2 * margin
 
-def geo_to_px(coords):
-  y = round(height - (coords['lat'] * 10000 - y_min + margin))
-  x = round(coords['lon'] * 10000 - x_min + margin)
+
+width = int(round(x_max - x_min) + 2 * margin)
+height = int(round(y_max - y_min) + 2 * margin)
+
+print(width)
+print(height)
+
+def geo_to_px(lat, lon):
+  y = int(round(height - (lat * 17600 - y_min + margin)))
+  x = int(round(lon * 10000 - x_min + margin))
   return [x, y]
+  
+def cr_to_xyxy(c, r):
+  x1 = c[0] - r/2
+  x2 = c[0] + r/2
+  y1 = c[1] - r/2
+  y2 = c[1] + r/2
+  return [x1, y1, x2, y2]
   
 for station in stations:
   for dt in station['dates']:
@@ -39,8 +58,101 @@ for station in stations:
       ln['to'] = station['dates'][-1]['to']
 
 for section in sections:
+  draw_coords = []
+  coords = section['coords'].split(',')
+  for lat, lon in zip(coords[::2], coords[1::2]):
+    xy = geo_to_px(float(lat), float(lon))
+    draw_coords.append(xy[0])
+    draw_coords.append(xy[1])
+  section['draw_coords'] = draw_coords
   if not 'to' in section:
     section['to'] = end_date
+  
 
 current_date = start_date
+
+while current_date <= end_date:
+  print(current_date)
+  
+  frame = Image.new("RGB", (width, height), "white")
+  draw = ImageDraw.Draw(frame)
+  
+  draw.text((64, 200), current_date.isoformat(), font = font_120, fill = "black")
+  
+  for section in sections:
+    str_width = 8
+    s_since = date(section['since'].year, section['since'].month, 1)
+    s_to = date(section['to'].year, section['to'].month, 1)
+    if s_since == current_date:
+      str_width = 12
+    if s_since <= current_date and current_date < s_to:
+      #print(section['draw_coords'])
+      #print("#" + lines[section['line']]['color'])
+      draw.line(xy=section['draw_coords'], fill="#" + str(lines[section['line']]['color']), width=str_width)
+  
+  stations_count = 0
+  
+  for station in stations:
+    exists = False
+    radius = 16
+    for dt in station['dates']:
+      dt_since = date(dt['since'].year, dt['since'].month, 1)
+      dt_to = date(dt['to'].year, dt['to'].month, 1)
+      if dt_since == current_date:
+        radius = 24
+      if dt_since <= current_date and current_date < dt_to:
+        exists = True
+    if exists == True:
+      stations_count +=1
+      color = ''
+      for line in station['lines']:
+        line_since = date(line['since'].year, line['since'].month, 1)
+        line_to = date(line['to'].year, line['to'].month, 1)
+        if line_since == current_date:
+          radius = 24
+        if line_since <= current_date and current_date < line_to:
+          color = "#" + str(lines[line['name']]['color'])
+      draw.ellipse(xy=cr_to_xyxy(geo_to_px(station['coords']['lat'], station['coords']['lon']), radius), outline=color, fill=color)
+
+  
+  draw.text((64, 400), str(stations_count), font = font_240, fill = "black")
+  
+  frame.save("png/metro-" + str(current_date.year) + "-" + str(current_date.month) + ".png")
+  
+  current_date = current_date + relativedelta(months = +1)
+
+
+
+
+#    
+#    stations_count = 0
+#    
+#    STATIONS.each do |s|
+# 
+#      if exists
+#        stations_count +=1
+#        color = ''
+#        s['lines'].each do |line|
+#          line_since = Date.new(line['since'].year, line['since'].month, 1)
+#          line_to = Date.new(line['to'].year, line['to'].month, 1)
+#          if line_since == current_date
+#            radius = 24
+#          end
+#          if line_since <= current_date && line_to >= current_date
+#            color = LINES[line['name']]['color']
+#          end
+#        end
+#        x, y = geo_to_px(s['coords'])
+#        circle cx: x, cy: y, r: radius, fill: '#' + color.to_s
+#      end
+#    end
+#    
+#    text stations_count.to_s, font_size: 240, font_family: 'arial', font_weight: 'bold', x: 64, y: 400
+#    
+#  end
+#
+#  svg.save current_date.strftime 'svg/metro-%Y-%m'
+#  
+#  current_date = current_date >> 1
+#end
 
