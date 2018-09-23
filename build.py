@@ -2,6 +2,9 @@ from PIL import Image, ImageDraw, ImageFont
 import yaml
 from datetime import date, timedelta
 from dateutil.relativedelta import *
+import locale
+
+#locale.setlocale(locale.LC_ALL, 'ru_RU')
 
 stations_str = file('stations2.yaml', 'r')
 lines_str = file('lines.yaml', 'r')
@@ -16,11 +19,9 @@ margin = 40
 font_120 = ImageFont.truetype('FreeSans.ttf', 120)
 font_240 = ImageFont.truetype('FreeSans.ttf', 240)
 
-images = []
-
 #start_date = date(1935, 01, 01)
-start_date = date(2009, 12, 01)
-end_date = date(2019, 01, 01)
+start_date = date(2019, 7, 01)
+end_date = date(2020, 01, 01)
 
 y_min = int(round(float(min(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
 y_max = int(round(float(max(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
@@ -77,7 +78,7 @@ while current_date <= end_date:
   frame = Image.new("RGB", (width, height), "white")
   draw = ImageDraw.Draw(frame)
   
-  draw.text((64, 200), current_date.isoformat(), font = font_120, fill = "black")
+  draw.text((64, 200), unicode(current_date.strftime('%Y %B'),'cp1251'), font = font_120, fill = "black")
   
   for section in sections:
     str_width = 8
@@ -86,8 +87,6 @@ while current_date <= end_date:
     if s_since == current_date:
       str_width = 12
     if s_since <= current_date and current_date < s_to:
-      #print(section['draw_coords'])
-      #print("#" + lines[section['line']]['color'])
       draw.line(xy=section['draw_coords'], fill="#" + str(lines[section['line']]['color']), width=str_width)
   
   stations_count = 0
@@ -110,6 +109,10 @@ while current_date <= end_date:
         line_to = date(line['to'].year, line['to'].month, 1)
         if line_since == current_date:
           radius = 24
+        if relativedelta(current_date, line_since).months < 10 and relativedelta(current_date, line_since).years == 0:
+          circle_radius = (relativedelta(current_date, line_since).months + 3) * 8
+          color = "#" + str(lines[line['name']]['color'])
+          draw.ellipse(xy=cr_to_xyxy(geo_to_px(station['coords']['lat'], station['coords']['lon']), circle_radius), outline=color)
         if line_since <= current_date and current_date < line_to:
           color = "#" + str(lines[line['name']]['color'])
       draw.ellipse(xy=cr_to_xyxy(geo_to_px(station['coords']['lat'], station['coords']['lon']), radius), outline=color, fill=color)
@@ -117,42 +120,12 @@ while current_date <= end_date:
   
   draw.text((64, 400), str(stations_count), font = font_240, fill = "black")
   
-  frame.save("png/metro-" + str(current_date.year) + "-" + str(current_date.month) + ".png")
+  frame = frame.resize(size=(width/2, height/2), resample=Image.LANCZOS)
+  
+  frame.save(current_date.strftime("png/metro-%Y-%m.png"))
+  
+  current_date.strftime("png/metro-%Y-%m.png")
   
   current_date = current_date + relativedelta(months = +1)
 
-
-
-
-#    
-#    stations_count = 0
-#    
-#    STATIONS.each do |s|
-# 
-#      if exists
-#        stations_count +=1
-#        color = ''
-#        s['lines'].each do |line|
-#          line_since = Date.new(line['since'].year, line['since'].month, 1)
-#          line_to = Date.new(line['to'].year, line['to'].month, 1)
-#          if line_since == current_date
-#            radius = 24
-#          end
-#          if line_since <= current_date && line_to >= current_date
-#            color = LINES[line['name']]['color']
-#          end
-#        end
-#        x, y = geo_to_px(s['coords'])
-#        circle cx: x, cy: y, r: radius, fill: '#' + color.to_s
-#      end
-#    end
-#    
-#    text stations_count.to_s, font_size: 240, font_family: 'arial', font_weight: 'bold', x: 64, y: 400
-#    
-#  end
-#
-#  svg.save current_date.strftime 'svg/metro-%Y-%m'
-#  
-#  current_date = current_date >> 1
-#end
 

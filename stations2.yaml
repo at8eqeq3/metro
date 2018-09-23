@@ -122,6 +122,8 @@
 - name: "Воробьёвы горы"
   dates:
   - since: 1959-01-12
+    to: 1983-10-25
+  - since: 2002-12-14
   lines:
   - name: "1SL"
   coords:
@@ -183,6 +185,14 @@
   coords:
     lat: 55.878764
     lon: 37.481493
+- name: "Беломорская"
+  dates:
+  - since: 2022-12-12 ### ещё не открыта
+  lines:
+  - name: "2ZL"
+  coords:
+    lat: 55.8658
+    lon: 37.4764
 - name: "Речной вокзал"
   dates:
   - since: 1964-12-31
@@ -403,7 +413,11 @@
   dates:
   - since: 1989-12-31
   lines:
+  - name: 4FL
+    since: 1989-12-31
+    to: 2008-01-07
   - name: "3APL"
+    since: 2008-01-07
   coords:
     lat: 55.7567
     lon: 37.4081
@@ -411,7 +425,11 @@
   dates:
   - since: 1965-07-05
   lines:
+  - name: 4FL
+    since: 1965-07-05
+    to: 2008-01-07
   - name: "3APL"
+    since: 2008-01-07
   coords:
     lat: 55.7408
     lon: 37.4168
@@ -610,32 +628,68 @@
 - name: "Киевская"
   dates:
   - since: 1937-03-20
+    to: 1953-04-05
+  - since: 1958-11-07
   lines:
+  - name: 1SL
+    since: 1937-03-20
+    to: 1938-03-13
+  - name: 3APL
+    since: 1938-03-13
+    to: 1953-04-05
   - name: "4FL"
+    since: 1958-11-07
   coords:
     lat: 55.7436
     lon: 37.5655
 - name: "Смоленская"
   dates:
   - since: 1935-05-15
+    to: 1953-04-05
+  - since: 1958-11-07
   lines:
+  - name: 1SL
+    since: 1935-05-01
+    to: 1938-03-13
+  - name: 3APL
+    since: 1938-03-13
+    to: 1953-04-05
   - name: "4FL"
+    since: 1958-11-07
   coords:
     lat: 55.7488
     lon: 37.5825
 - name: "Арбатская"
   dates:
   - since: 1935-05-15
+    to: 1953-04-05
+  - since: 1958-11-07
   lines:
+  - name: 1SL
+    since: 1935-05-01
+    to: 1938-03-13
+  - name: 3APL
+    since: 1938-03-13
+    to: 1953-04-05
   - name: "4FL"
+    since: 1958-11-07
   coords:
     lat: 55.7518
     lon: 37.6007
 - name: "Александровский сад"
   dates:
   - since: 1935-05-15
+    to: 1953-04-05
+  - since: 1958-11-07
   lines:
+  - name: 1SL
+    since: 1935-05-01
+    to: 1938-03-13
+  - name: 3APL
+    since: 1938-03-13
+    to: 1953-04-05
   - name: "4FL"
+    since: 1958-11-07
   coords:
     lat: 55.7525
     lon: 37.6085
@@ -1697,7 +1751,7 @@
     lon: 37.5578
 - name: "Каширская"
   dates:
-  - since: 1969-08-11
+  - since: 1995-11-02
   lines:
   - name: "11KL"
   coords:
@@ -1707,7 +1761,11 @@
   dates:
   - since: 1969-08-11
   lines:
+  - name: 2ZL
+    since: 1969-08-11
+    to: 1995-11-02
   - name: "11KL"
+    since: 1995-11-02
   coords:
     lat: 55.6533
     lon: 37.6194
@@ -1715,7 +1773,11 @@
   dates:
   - since: 1969-08-11
   lines:
+  - name: 2ZL
+    since: 1969-08-11
+    to: 1995-11-02
   - name: "11KL"
+    since: 1995-11-02
   coords:
     lat: 55.653
     lon: 37.5983
@@ -1775,3 +1837,22 @@
   coords:
     lat: 55.538
     lon: 37.5158
+### Закрыты навсегда
+- name: Первомайская
+  dates:
+    - since: 1954-09-24
+      to: 1961-10-21
+  lines:
+    - name: 3APL
+  coords:
+    lat: 55.7894
+    lon: 37.7744
+- name: Калужская
+  dates:
+    - since: 1964-04-15
+      to: 1974-08-12
+  lines:
+    - name: 6KRL
+  coords:
+    lat: 55.6583
+    lon: 37.5453
