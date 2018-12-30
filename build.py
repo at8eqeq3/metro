@@ -20,7 +20,7 @@ font_120 = ImageFont.truetype('FreeSans.ttf', 120)
 font_240 = ImageFont.truetype('FreeSans.ttf', 240)
 
 #start_date = date(1935, 01, 01)
-start_date = date(2019, 7, 01)
+start_date = date(2018, 01, 01)
 end_date = date(2020, 01, 01)
 
 y_min = int(round(float(min(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
@@ -120,7 +120,7 @@ while current_date <= end_date:
   
   draw.text((64, 400), str(stations_count), font = font_240, fill = "black")
   
-  frame = frame.resize(size=(width/2, height/2), resample=Image.LANCZOS)
+  frame = frame.resize(size=(width/4, height/4), resample=Image.LANCZOS)
   
   frame.save(current_date.strftime("png/metro-%Y-%m.png"))
   

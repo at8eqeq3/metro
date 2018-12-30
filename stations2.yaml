@@ -187,7 +187,7 @@
     lon: 37.481493
 - name: "Беломорская"
   dates:
-  - since: 2022-12-12 ### ещё не открыта
+  - since: 2018-12-20
   lines:
   - name: "2ZL"
   coords:
@@ -1749,6 +1749,14 @@
   coords:
     lat: 55.7925
     lon: 37.5578
+- name: "Савёловская"
+  dates:
+  - since: 2018-12-30
+  lines:
+  - name: "11BKL"
+  coords:
+    lat: 55.7934
+    lon: 37.587
 - name: "Каширская"
   dates:
   - since: 1995-11-02
