@@ -20,7 +20,7 @@ font_120 = ImageFont.truetype('FreeSans.ttf', 120)
 font_240 = ImageFont.truetype('FreeSans.ttf', 240)
 
 #start_date = date(1935, 01, 01)
-start_date = date(2018, 01, 01)
+start_date = date(2008, 01, 01)
 end_date = date(2020, 01, 01)
 
 y_min = int(round(float(min(list(map(lambda station: station['coords']['lat'] * 1.76, stations)))), 4) * 10000)
