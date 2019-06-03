@@ -1781,6 +1781,7 @@
 - name: "Каховская"
   dates:
   - since: 1969-08-11
+    to: 2019-03-30
   lines:
   - name: 2ZL
     since: 1969-08-11
