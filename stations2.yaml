@@ -1847,6 +1847,39 @@
   coords:
     lat: 55.538
     lon: 37.5158
+- name: "Некрасовка"
+  dates:
+  - since: 2019-06-03
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7036
+    lon: 37.9264
+- name: "Лухмановская"
+  dates:
+  - since: 2019-06-03
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7085
+    lon: 37.9004
+- name: "Улица Дмитриевского"
+  dates:
+  - since: 2019-06-03
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.71
+    lon: 37.8792
+- name: "Косино"
+  dates:
+  - since: 2019-06-03
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7033
+    lon: 37.8511
+
 ### Закрыты навсегда
 - name: Первомайская
   dates:
