@@ -177,6 +177,38 @@
   coords:
     lat: 55.6219
     lon: 37.4242
+- name: "Филатов луг"
+  dates:
+  - since: 2019-06-20
+  lines:
+  - name: "1SL"
+  coords:
+    lat: 55.6011
+    lon: 37.4075
+- name: "Прокшино"
+  dates:
+  - since: 2019-06-20
+  lines:
+  - name: "1SL"
+  coords:
+    lat: 55.5827
+    lon: 37.4425
+- name: "Ольховая"
+  dates:
+  - since: 2019-06-20
+  lines:
+  - name: "1SL"
+  coords:
+    lat: 55.5690
+    lon: 37.4589
+- name: "Коммунарка"
+  dates:
+  - since: 2019-06-20
+  lines:
+  - name: "1SL"
+  coords:
+    lat: 55.5605
+    lon: 37.4696
 - name: "Ховрино"
   dates:
   - since: 2017-12-31
