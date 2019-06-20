@@ -1,3 +1,4 @@
 *.svg
 *.png
 output/*
+osm-export.json
