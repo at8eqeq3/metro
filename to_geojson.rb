@@ -12,7 +12,7 @@ data['type'] = 'FeatureCollection'
 data['features'] = []
 
 START_DATE = Date.new(1935, 01, 01)
-END_DATE   = Date.new(2020, 01, 01)
+END_DATE   = Date.new(2020, 12, 31)
 
 sections.each do |section|
     section['to']    = END_DATE   unless section.key? 'to'
