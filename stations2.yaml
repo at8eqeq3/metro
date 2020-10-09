@@ -1911,6 +1911,56 @@
   coords:
     lat: 55.7033
     lon: 37.8511
+- name: "Юго-Восточная"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.705
+    lon: 37.818
+- name: "Окская"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7186
+    lon: 37.7817
+- name: "Стахановская"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7275
+    lon: 37.7514
+- name: "Нижегородская"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7325
+    lon: 37.7286
+- name: "Авиамоторная"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7531
+    lon: 37.7186
+- name: "Лефортово"
+  dates:
+  - since: 2020-03-27
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.7647
+    lon: 37.703
+
+
 
 ### Закрыты навсегда
 - name: Первомайская
