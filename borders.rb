@@ -11,7 +11,7 @@ $outfile.puts '{"type": "FeatureCollection", "features": ['
 R          = 6378137
 R_MINOR    = 6356752.314245179
 START_DATE = Date.new(1935, 1, 1)
-END_DATE   = Date.new(2020, 1, 1)
+END_DATE   = Date.new(2038, 2, 1)
 ### translated from LeafletJS
 def unproject(coords)
   d = 180 / Math::PI

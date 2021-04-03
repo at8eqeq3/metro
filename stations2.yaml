@@ -1289,6 +1289,7 @@
   dates:
   - since: 2014-01-31
     to: 2018-02-24
+  - since: 2020-12-12
   lines:
   - name: "8SL"
   coords:
@@ -1564,8 +1565,8 @@
   lines:
   - name: "10LDL"
   coords:
-    lat: 55.8665
-    lon: 37.5471
+    lat: 55.865
+    lon: 37.5483
 - name: "Верхние Лихоборы"
   dates:
   - since: 2018-03-22
@@ -1758,6 +1759,22 @@
   coords:
     lat: 55.7574
     lon: 37.5240
+- name: "Мнёвники"
+  dates:
+  - since: 2021-04-01
+  lines:
+  - name: "11BKL"
+  coords:
+    lat: 55.76
+    lon: 37.4708
+- name: "Карамышевская"
+  dates:
+  - since: 2021-04-01
+  lines:
+  - name: "11BKL"
+  coords:
+    lat: 55.7753
+    lon: 37.4844
 - name: "Хорошёвская"
   dates:
   - since: 2018-02-26
@@ -1959,6 +1976,17 @@
   coords:
     lat: 55.7647
     lon: 37.703
+- name: "Электрозаводская"
+  dates:
+  - since: 2020-12-31
+  lines:
+  - name: "15NL"
+  coords:
+    lat: 55.781
+    lon: 37.703
+
+
+
 
 
 
@@ -1981,3 +2009,55 @@
   coords:
     lat: 55.6583
     lon: 37.5453
+    
+### Строятся
+- name: Суворовская
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 5KL
+  coords:
+    lat: 55.7802
+    lon: 37.6204
+- name: Пыхтино
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 8SL
+  coords:
+    lat: 55.625
+    lon: 37.298
+- name: Внуково
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 8SL
+  coords:
+    lat: 55.6067
+    lon: 37.2883
+- name: Улица 800-летия Москвы
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 10LDL
+  coords:
+    lat: 55.8775
+    lon: 37.5458
+- name: Лианозово
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 10LDL
+  coords:
+    lat: 55.8978
+    lon: 37.5436
+- name: Физтех
+  dates:
+    - since: 2038-01-19
+  lines:
+    - name: 10LDL
+  coords:
+    lat: 55.9214
+    lon: 37.5431
+
+
