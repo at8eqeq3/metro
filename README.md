@@ -62,4 +62,6 @@
 
 ## Web-мордочка
 
-С некоторых пор, карту можно посмотреть в браузере. Здесь у нас наскоро слепленное, но рабочее поделие, состоящее из [Leaflet](https://leafletjs.com/), плагина [TimeDimension](https://github.com/socib/Leaflet.TimeDimension) для него и подложки [Stamen toner-lite](http://maps.stamen.com/). Демки пока нет, но можно без особого труда положить `map.html`, `map.js` и `metro.json` на веб-сервер и зайти на http://<your.server>/map.html. Для сборки GeoJSON используется ruby-сценарий `to_geojson.rb`.
+С некоторых пор, карту можно посмотреть в браузере. Здесь у нас наскоро слепленное, но рабочее поделие, состоящее из [Leaflet](https://leafletjs.com/), плагина [TimeDimension](https://github.com/socib/Leaflet.TimeDimension) для него и подложки [Stamen toner-lite](http://maps.stamen.com/). Демка: https://at8eqeq3.me/metro, можно также без особого труда положить `map.html`, `map.js`, `metro.json` и `borders.json` себе на веб-сервер и зайти на http://<your.server>/map.html. С HTTPS чуть больше мороки, но ничего смертельного: оставлю пытливому читателю для самостоятельного решения, если понадобится.
+
+Для сборки GeoJSON используется ruby-сценарий `to_geojson.rb`.
