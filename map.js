@@ -34,7 +34,7 @@ map.addControl(this.timeDimensionControl);
 var layer = new L.StamenTileLayer("toner-lite");
 map.addLayer(layer);
 
-$.getJSON('/metro.json', function(data) {
+$.getJSON('/metro/metro.json', function(data) {
     var geojson = L.geoJson(data, {
         style: function(feature) {
             return {
@@ -51,7 +51,7 @@ $.getJSON('/metro.json', function(data) {
     }).addTo(map);
   });
 
-$.getJSON('/borders.json', function(data) {
+$.getJSON('/metro/borders.json', function(data) {
     var geojson = L.geoJson(data, {
         style: function(feature) {
             return {
